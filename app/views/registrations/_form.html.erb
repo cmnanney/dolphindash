@@ -1,0 +1,45 @@
+<%= form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+      <ul>
+      <% @registration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %><br />
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %><br />
+ 	<%= f.label :street_address %><br />
+	<%= f.text_field :address %><br />
+	<%= f.label :city %><br />
+	<%= f.text_field :city %><br />
+	<%= f.label :state %><br />
+	<%= f.text_field :state %><br />
+	<%= f.label :zip %><br />
+	<%= f.text_field :zip %><br />
+	<%= f.label :phone %><br />
+	<%= f.telephone_field :phone %><br />
+	<%= f.label :email %><br />
+	<%= f.email_field :email %><br />
+	<%= f.label :age %><br />
+	<%= f.number_field :age %><br />
+ </div>
+ <div class="option">	
+	<%= f.label :gender %><br />
+	<%= f.select :gender, options_for_select(["Male", "Female"]) %><br /><br />
+	<%= f.label :catagory %><br />
+	<%= f.select :catagory, options_for_select(["Dolphin Dash", "Turtle Trot"]) %><br /><br />
+	<%= f.label :shirt_size %><br />
+	<%= f.select :shirtsize, options_for_select(["Adult XXL", "Adult XL", "Adult L", "Adult M", "Adult S", "Youth XL", "Youth L", "Youth M", "Youth S"])%><br /><br />
+   </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
