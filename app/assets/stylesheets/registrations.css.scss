@@ -1,3 +1,35 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+html {
+	overflow-y: scroll;
+}
+
+header {
+	padding-top: 60px;
+	width: auto;
+	background: url("5klogo.jpg") no-repeat;
+	}
+
+body {
+	padding-top: 60px;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+}
+
+.center h1 {
+	margin-bottom: 10px;
+}
+
