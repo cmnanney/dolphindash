@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <form>
+	  <fieldset> 
+		  <legend>New Registration</legend>
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %><br />
+    <%= f.text_field :first_name, :placeholder => "First Name" %><br />
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %><br />
  	<%= f.label :street_address %><br />
@@ -23,14 +25,14 @@
 	<%= f.label :state %><br />
 	<%= f.text_field :state %><br />
 	<%= f.label :zip %><br />
-	<%= f.text_field :zip %><br />
+	<%= f.text_field :zip, :placeholder => "xxxxx" %><br />
 	<%= f.label :phone %><br />
-	<%= f.telephone_field :phone %><br />
+	<%= f.telephone_field :phone, :placeholder => "xxx-xxx-xxxx" %><br />
 	<%= f.label :email %><br />
-	<%= f.email_field :email %><br />
+	<%= f.email_field :email, :placeholder => "name@server.com" %><br />
 	<%= f.label :age %><br />
 	<%= f.number_field :age %><br />
- </div>
+		
  <div class="option">	
 	<%= f.label :gender %><br />
 	<%= f.select :gender, options_for_select(["Male", "Female"]) %><br /><br />
@@ -39,6 +41,8 @@
 	<%= f.label :shirt_size %><br />
 	<%= f.select :shirtsize, options_for_select(["Adult XXL", "Adult XL", "Adult L", "Adult M", "Adult S", "Youth XL", "Youth L", "Youth M", "Youth S"])%><br /><br />
    </div>
+</fieldset>
+</form>
   <div class="actions">
     <%= f.submit %>
   </div>

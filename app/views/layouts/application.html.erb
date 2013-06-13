@@ -3,14 +3,24 @@
 <head>
   <title>IMMS Dolphin Dash Registration Form</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag  "registrations", :media => "all"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+	  <script src="thhp:/html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
 </head>
-<header>
-</header>
+
 <body>
-
-<%= yield %>
-
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to "Home", "http://imms.org", id:"logo" %>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<%= yield %>
+	</div>
 </body>
 </html>

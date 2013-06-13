@@ -1,3 +1,41 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+html {
+	overflow-y: scroll;
+	}
+
+body {
+	background-image: url("5klogo.jpg");
+	background-position: top;
+	background-size: 75%;
+	padding-top: 60px;
+	background-color: #33ffFF;
+	background-repeat: no-repeat;
+	}
+
+section {
+	overflow: auto;
+	}
+			
+//#logo {
+//	background-image: //url("http://imms.org/images/header_text.jpg");
+//	background-size: 600px;
+//	}
+
+.info {
+	float: left;
+	border: 2px solid white;
+	padding: 10px;
+	width: 285px;
+	height: 450px;
+	background-color: lightskyblue;
+	display: inline;
+	}
+
+.form {
+	padding: 20px;
+	}
